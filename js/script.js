@@ -31,6 +31,12 @@ while (!isNaN(userLastname) || userLastname.length <= 1) {
     i++;
 }
 
+//Corretto inserimento
+
+alert('Success!')
+
+
+
 // Invio del cognome ad array esistente
 lastName.push(userLastname);
 console.log(lastName);
@@ -49,7 +55,7 @@ for (i = 0; i < lastName.length; i++) {
 // Stampa indice nella lista
 
 var indexLastname = lastName.indexOf(userLastname) + 1;
-console.log(indexLastname, userLastname);
+console.log('Posizione: ', indexLastname, 'cognome inserito', userLastname);
 
 // stampa nome + posizione
 

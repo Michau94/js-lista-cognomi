@@ -5,9 +5,20 @@
     margin: 0;
     box-sizing: border-box;
     text-align: center;
+    color: white;
+    font-family: 'Source Sans Pro', sans-serif;
 }
 
 /* MAIN */
+
+main {
+    background-color: darkslategray;
+}
+
+.content {
+    height: 100vh;
+    padding: 20px;
+}
 
 #lastname-list {
     text-align: center;
