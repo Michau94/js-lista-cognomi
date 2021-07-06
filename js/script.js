@@ -18,16 +18,21 @@ var lastName = ['Bianchi', 'Neri', 'Rossi', 'Verdi', 'Gialli'];
 
 //richiesta cognome all'utente e push nell'array esistente
 
-var userLastname = prompt('Inserisci il tuo cognome', 'Wadowski').toUpperCase();
+var userLastname = prompt('Inserisci il tuo cognome', 'Wadowski')
+// capitalize 
+
+userLastname = userLastname.charAt(0).toUpperCase() + userLastname.slice(1);
+
+console.log(userLastname);
 
 
 
 // validation 
 var i = 0;
 
-while (!isNaN(userLastname) || userLastname.length <= 1) {
+while (!isNaN(userLastname) || userLastname.length <= 0) {
     alert('Dati errati, riprovare.');
-    userLastname = prompt('Inserisci il tuo cognome', 'Wadowski').toUpperCase();
+    userLastname = prompt('Inserisci il tuo cognome', 'Wadowski');
     i++;
 }
 
@@ -39,10 +44,12 @@ alert('Success!')
 
 // Invio del cognome ad array esistente
 lastName.push(userLastname);
-console.log(lastName);
+console.log('Lista non ordinata: ', lastName);
 
 // Ordine della lista
+
 lastName.sort();
+console.table(lastName);
 
 //Visualizzazione con variabile d'appoggio per evitare sovrascrittura 
 
@@ -50,6 +57,7 @@ var listDisplayed = "";
 
 for (i = 0; i < lastName.length; i++) {
     listDisplayed += '<li>' + lastName[i] + '</li>';
+    console.log(lastName[i]);
 }
 
 // Stampa indice nella lista
@@ -65,7 +73,7 @@ var message = "L'ultimo cognome inserito è: ";
 // OUTPUT
 
 //stampa lista cognomi su html
-display.innerHTML = listDisplayed.toLowerCase();
+display.innerHTML = listDisplayed;
 
 // STAMPA ULTIMO COGNOME INSERITO + INDICE 
 lastAdded.innerHTML = message + userLastname + ' in posizione ' + indexLastname;
