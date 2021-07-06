@@ -6,4 +6,10 @@
     box-sizing: border-box;
 }
 
+#lastname-list li {
+    text-transform: capitalize;
+}
 
+#lastAdd {
+    text-transform: capitalize;
+}
