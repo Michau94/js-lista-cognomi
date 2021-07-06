@@ -19,11 +19,7 @@ var lastName = ['Bianchi', 'Neri', 'Rossi', 'Verdi', 'Gialli'];
 //richiesta cognome all'utente e push nell'array esistente
 
 var userLastname = prompt('Inserisci il tuo cognome', 'Wadowski')
-// capitalize 
 
-userLastname = userLastname.charAt(0).toUpperCase() + userLastname.slice(1);
-
-console.log(userLastname);
 
 
 
@@ -35,6 +31,10 @@ while (!isNaN(userLastname) || userLastname.length <= 0) {
     userLastname = prompt('Inserisci il tuo cognome', 'Wadowski');
     i++;
 }
+// capitalize 
+
+userLastname = userLastname.charAt(0).toUpperCase() + userLastname.slice(1);
+console.log(userLastname);
 
 //Corretto inserimento
 
