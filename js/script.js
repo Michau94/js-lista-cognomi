@@ -22,15 +22,14 @@ var userLastname = prompt('Inserisci il tuo cognome', 'Wadowski').toUpperCase();
 
 
 
-//todo validation 
+// validation 
 var i = 0;
-while (!isNaN(userLastname)) {
-    alert('Last names have no numbers.');
+
+while (!isNaN(userLastname) || userLastname.length <= 1) {
+    alert('Dati errati, riprovare.');
     userLastname = prompt('Inserisci il tuo cognome', 'Wadowski').toUpperCase();
     i++;
 }
-
-
 
 // Invio del cognome ad array esistente
 lastName.push(userLastname);
@@ -46,7 +45,6 @@ var listDisplayed = "";
 for (i = 0; i < lastName.length; i++) {
     listDisplayed += '<li>' + lastName[i] + '</li>';
 }
-
 
 // Stampa indice nella lista
 
@@ -64,7 +62,8 @@ var message = "L'ultimo cognome inserito è: ";
 display.innerHTML = listDisplayed.toLowerCase();
 
 // STAMPA ULTIMO COGNOME INSERITO + INDICE 
-lastAdded.innerHTML = message + userLastname.toLowerCase() + ' in posizione ' + indexLastname;
+lastAdded.innerHTML = message + userLastname + ' in posizione ' + indexLastname;
+
 
 
 

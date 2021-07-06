@@ -4,12 +4,21 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    text-align: center;
+}
+
+/* MAIN */
+
+#lastname-list {
+    text-align: center;
 }
 
 #lastname-list li {
     text-transform: capitalize;
+    padding: 10px;
 }
 
 #lastAdd {
-    text-transform: capitalize;
+    padding: 20px;
+    border: 1px dotted black;
 }
